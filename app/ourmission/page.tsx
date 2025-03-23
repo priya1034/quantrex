@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Mission() {
   return (
@@ -36,6 +38,10 @@ export default function Mission() {
           <p className="mt-4 text-lg text-gray-300">
             By fostering innovation, collaboration, and sustainability, we strive to build transformative solutions that shape a smarter, more efficient world.
           </p>
+          <blockquote className="mt-4 italic text-gray-400 text-lg">
+            &quot;Quantum computing will transform the world, enabling us to solve problems that were previously impossible, and to understand the universe in ways we never thought possible.&quot;
+            <br /> — Peter Shor
+          </blockquote>
           <div className="mt-6">
             <Link href="/ourtechnology">
               <button className="border border-blue-500 px-8 py-4 rounded-lg text-lg hover:bg-orange-500 hover:text-white">
@@ -47,7 +53,13 @@ export default function Mission() {
 
         {/* Right Image */}
         <div className="mt-10 md:mt-0">
-          <img src="/mission.png" alt="Our Mission" className="w-[500px] rounded-lg shadow-lg"/>
+          <Image
+            src="/mission.png"
+            alt="Our Mission"
+            width={500}
+            height={300}
+            className="rounded-lg shadow-lg"
+          />
         </div>
       </section>
     </main>

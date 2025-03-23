@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaTwitter, FaLinkedin, FaYoutube, FaInstagram, FaFacebook } from "react-icons/fa";
 
@@ -22,23 +23,23 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         className="relative z-10 flex flex-col md:flex-row items-center justify-between px-10 py-24 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         <div className="max-w-2xl text-center md:text-left">
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-6xl font-bold text-blue-400 leading-tight tracking-wide"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Quantum-Powered AI  
+            Quantum-Powered AI
             Revolutionizing Industries
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="mt-6 text-lg md:text-xl text-gray-300 leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -46,7 +47,7 @@ export default function Home() {
           >
             At Quantrex, we are at the vanguard of computational evolution, harnessing the synergistic potential of Quantum Computing, Artificial Intelligence, and High-Performance Computing. By leveraging quantum superposition, entanglement, and quantum parallelism, we transcend classical computational constraints—accelerating complex problem-solving in exponential time scales.
           </motion.p>
-          <motion.p 
+          <motion.p
             className="mt-4 italic text-gray-400 text-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -54,14 +55,14 @@ export default function Home() {
           >
             Quantum mechanics isn’t the future. It’s now.
           </motion.p>
-          <motion.div 
+          <motion.div
             className="mt-8 flex space-x-4"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
             <Link href="/ourtechnology">
-              <motion.button 
+              <motion.button
                 className="border border-blue-500 px-8 py-4 rounded-lg text-lg font-medium tracking-wide hover:bg-orange-500 hover:text-white transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -70,7 +71,7 @@ export default function Home() {
               </motion.button>
             </Link>
             <Link href="/contact">
-              <motion.button 
+              <motion.button
                 className="border border-blue-500 px-8 py-4 rounded-lg text-lg font-medium tracking-wide hover:bg-orange-500 hover:text-white transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -81,13 +82,19 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           className="mt-12 md:mt-0"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <img src="/homebg.jpg" alt="Quantum Simulation" className="w-[500px] rounded-lg shadow-lg border-4 border-blue-500"/>
+          <Image
+            src="/homebg.jpg"
+            alt="Quantum Simulation"
+            width={500}
+            height={300}
+            className="rounded-lg shadow-lg border-4 border-blue-500"
+          />
         </motion.div>
       </motion.section>
 
@@ -99,19 +106,19 @@ export default function Home() {
         {/* Social Media Icons */}
         <div className="mt-4 flex space-x-6">
           <a href="https://x.com/QUANTREX_AI" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className="text-white text-2xl hover:text-blue-400 transition duration-300"/>
+            <FaTwitter className="text-white text-2xl hover:text-blue-400 transition duration-300" />
           </a>
           <a href="https://www.linkedin.com/in/quantrex/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="text-white text-2xl hover:text-blue-400 transition duration-300"/>
+            <FaLinkedin className="text-white text-2xl hover:text-blue-400 transition duration-300" />
           </a>
           <a href="https://www.youtube.com/@QUANTREX-AI" target="_blank" rel="noopener noreferrer">
-            <FaYoutube className="text-white text-2xl hover:text-red-500 transition duration-300"/>
+            <FaYoutube className="text-white text-2xl hover:text-red-500 transition duration-300" />
           </a>
           <a href="https://www.instagram.com/quantrex_ai/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram className="text-white text-2xl hover:text-pink-500 transition duration-300"/>
+            <FaInstagram className="text-white text-2xl hover:text-pink-500 transition duration-300" />
           </a>
           <a href="https://www.facebook.com/profile.php?id=61574577028547" target="_blank" rel="noopener noreferrer">
-            <FaFacebook className="text-white text-2xl hover:text-blue-600 transition duration-300"/>
+            <FaFacebook className="text-white text-2xl hover:text-blue-600 transition duration-300" />
           </a>
         </div>
       </footer>
